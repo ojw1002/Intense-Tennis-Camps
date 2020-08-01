@@ -1,0 +1,334 @@
+<!--***** FACILITIES *****-->
+
+<!--Referenced code at 
+    https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+-->
+
+<!--Icons provided by: Font Awesome (https://fontawesome.com/v4.7.0/icons/)-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>FACILITIES | ITC</title>
+    <link rel="icon" type="images/logo.png" href="images/logo.png" sizes="16x16">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basic-style.css">
+    <link rel="stylesheet" href="facilities.css">
+
+    <script src="https://kit.fontawesome.com/575868ac71.js" crossorigin="anonymous"></script>
+    
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+
+    <!--***** Navbar *****-->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" width="50" height="50" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" data-target=".navbar-collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="facilities.html">FACILITIES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="camp-details.html">CAMP DETAILS</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">CONTACT US</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item float-right">
+              <a class="btn btn-warning" href="registration.html">REGISTER</a>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </nav>
+
+      <br>
+
+    <!--***** Facilities Jumbotron Header *****-->
+    <div class="jumbotron">
+        <div class="container" style="text-align:center">
+          <h1 class="display-3"><b>Facilities</b></h1>
+        </div>
+    </div>
+
+
+    <!--***** SRU logo *****-->
+    <div class="logo">
+      <figure class="figure">
+        <img src="images/fac/sru-logo.jpg" class="img-fluid" alt="SRU logo">
+        <figcaption class="figure-caption text-right" id="cap">&copy; Slippery Rock University</figcaption>
+        <br><br>
+        <i class="fas fa-chevron-circle-down"></i>
+    </div>
+
+
+    <!--***** About SRU *****-->
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">ABOUT<span class="text-muted"> SRU</span></h2>
+        <p class="lead">
+            <br>
+            Slippery Rock University</b> was founded in 1889. It is well known for its beautiful, historic campus
+            spreading over 660 rolling acres in Butler County. Intense Tennis Camps has been running Camps
+            at this wonderful State College since 2004. Its community consists of approximately 3,500
+            people. As of 2019, Slippery Rock University was recognized as one of the safest colleges in the 
+            United States by the National Council for Home Safety and Security. </p>
+
+            <br>
+            <p class="lead"><i class="fas fa-award text-warning"></i> SRU was named one of the Top 25 Safest College
+            Campuses in America in 2020. Click <a href="https://www.sru.edu/news/042920b?fbclid=IwAR27V7sFfNPYxLHDw8WFF_tHvPhWphaiTPJDL88PlMVaQklGMsPeGQYgVRY" target="_blank">here</a> to learn more.</p>
+            <br><br>
+            Want to learn more about Slippery Rock University? Click <a href="https://www.sru.edu" target="_blank"
+            title="Slippery Rock University Official Website">here</a>!
+      </div>
+      
+      <div class="col-md-5">
+          <div id="map" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#eee"/></div> 
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+
+    <!--***** Courts and More *****-->
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">COURTS <span class="text-muted">& MORE</span></h2>
+        <p class="lead">
+            <br>
+            Slippery Rock University offers 12 outdoor tennis courts. 6 of those courts are lit and
+            resurfaced. We also will travel to Grove City College. Grove City offers 8 new courts that have
+            just been redone in 2018.
+            <br>
+            <i>ITC is an outdoor camp. Indoor backup is not guaranteed, but the ITC will try their best!</i>
+            
+            <br>
+
+            <p class="lead"><u>Additional Recreational Facilities:</u></p>
+            <ul>
+                <li>Basketball</li>
+                <li>Badminton</li>
+                <li>Frisbee Golf</li>
+                <li>Swimming Pool</li>
+                <li>Volleyball</li>
+                <li>Soccer</li>
+                <li>Indoor Rock Climbing</li>
+            </ul>
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <div class="map"></div>
+
+        <img src="images/fac/courts.jpg" class="img-fluid" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"> <rect width="100%" height="100%" fill="#eee"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!--On Campus-->
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">ON<span class="text-muted">-CAMPUS</span></h2>
+        <p class="lead">
+            <br>
+            <i class="fas fa-home text-primary"></i> <u>Dorms:</u>
+        </p>
+        <p class="lead">
+            <ul>
+                <li><i>Dorms are supervised by counselors at all times</i></li>
+                <li>Air Conditioned</li>
+                <li>2-Person Residential Suites</li>
+                <li>Beds: Twin sized mattress</li>
+            </ul>
+            NOTE: Intense Tennis Camps is only guaranteed <b>"2-PERSON, RESIDENTIAL SUITES."</b><br>
+            <b>*Please list only 1 roommate during registration</b>
+        </p>
+            
+
+            <p class="lead">
+                <i class="fas fa-pizza-slice text-primary"></i> <u>Dining:</u>
+            </p>
+            <ul>
+                <li>All-you-can-eat meals provided by Boozel Dining Hall</li>
+            </ul>
+
+            <br>
+           <p class="lead">
+               <i class="fas fa-building text-primary"></i> <u>Smith Student Center:</u>
+           </p>
+            <ul>
+                <li>SGA Bookstore</li>
+                <li>Starbucks</li>
+            </ul>
+
+        </p>
+      </div>
+      <div class="col-md-5">
+          <img src="images/fac/sru.png" class="img-fluid" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#eee"/>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!--***** SRU Campus Map *****-->
+
+<div id="campus-map">
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">CAMPUS<span class="text-muted"> MAP</span></h2>
+          <p class="lead">
+              <br>
+              Here is the campus map for your reference. 
+              Click <a href="https://rockpride.sru.edu/map/index.html" target="_blank"
+              title="SRU Campus Map">here</a> for the full interactive
+              map!
+              
+              
+             
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          
+          <figure class="figure">
+          <img src="images/fac/sru-map.png" class="img-fluid" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"> <rect width="100%" height="100%" fill="#eee"/>
+          <figcaption class="figure-caption text-right">&copy; Slippery Rock University</figcaption>
+          </figure>
+        </div>
+      </div>
+</div>
+    
+
+    <hr class="featurette-divider">
+
+
+     <!--***** Footer *****-->
+     <footer>
+                         
+      <!--***** Extra Info *****-->
+      <div class="row text-center bg-dark">
+
+        <div class="col-lg-6 col-sm-12">
+        <div class="foot-main-item">
+          <h2 class="foot-title">RESOURCES</h2>
+          <ul id="footer-list">
+                <li><a href="faq.html" style="color:white" class="lead">FAQ</a></li>
+                <li><a href="registration.html#docu" style="color:white" class="lead">Camp Documents</a></li>
+                <li><a href="camp-details.html" style="color:white" class="lead">Superclinic Details</a></li>
+                <li><a href="facilities.html#campus-map" style="color:white" class="lead">SRU Campus Map</a></li>
+          </ul>
+          </div>
+        </div>
+        <br>
+
+        <div class="col-lg-6 col-sm-12">
+        <div class="foot-main-item">
+          <h2 class="foot-title">CONNECT</h2>
+       
+          <ul id="footer-list">
+            <li><a href="contact.html" style="color:white" class="lead">Contact Us</a></li>
+            <li><a href="about-us.html" style="color:white" class="lead">About Us</a></li>
+           
+            <ul id="footer-social-list">
+              <li class="facebook"><a title="Intense Tennis Camps Facebook" href="https://www.facebook.com/ITCbyAF/" target="_blank"><i class="fab fa-facebook-f" style="color:white"></i></a></td>
+              <li class="instagram"><a title="Andy Findlay Instagram" href="https://www.instagram.com/af10s/" target="_blank"><i class="fab fa-instagram" style="color:white"></i></a></td>
+              <li class="twitter"><a title="Andy Findlay Twitter" href="https://twitter.com/AF10S" target="_blank"><i class="fab fa-twitter" style="color:white"></i></a></td>
+              <li class="flikr"><a title="Intense Tennis Camp Flikr" href="https://www.flickr.com/photos/intensetenniscamps/" target="_blank"><i class="fab fa-flickr"style="color:white"></i></a></td>
+            </ul>
+          </ul>
+          </div>
+        </div>
+      </div>
+      
+
+     
+  
+      <!--***** Copyright *****-->
+    
+      <div class="row h-100 bg-primary text-center">
+      
+        <ul id="footer-copy-list">
+
+          <div class="col-lg-6 col-sm-12 my-auto w-100"> 
+          <li><a href="privacy-policy.html" target="_blank"style="color:white">Privacy Policy</a></li>
+          </div>
+
+        <div class="col-lg-6 col-sm-12 my-auto text-white w-100">
+          <li>&copy; 2004-2020 Intense Tennis Camps. All Rights Reserved </li>
+        </div>
+        
+        </ul>
+        
+      </div>
+    </footer>
+  
+    <!--***** GOOGlE MAP SCRIPT *****-->
+    <script>
+        function initMap() {
+        // The location of SRU
+            var sru = {lat: 41.063206, lng: -80.040479};
+        // The map, centered at SRU
+    
+            var map = new google.maps.Map(
+            document.getElementById('map'), {
+                zoom: 15, 
+                center: sru,
+                streetViewControl: true
+            });
+    
+            var contentString = '<div id="content">' +
+                '<h3>Slippery Rock University</h3>' +
+                '<p><b> 1 Morrow Way <br> Slippery Rock, Pennsylvania <br> 16057</p>' + '</div>';
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+                maxWidth:200,
+            });
+        //The marker, positioned at SRU
+            var marker = new google.maps.Marker({
+                position: sru, 
+                map: map
+            });
+            marker.addListener('click' , function() {
+                infowindow.open(map,marker);
+            });
+        }
+            </script>
+
+           
+    <!--***** GOOGLE API SCRIPT *****-->
+        <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOO1WAEOcfD547L1sEIqSMTpTxyWMjR2w&callback=initMap">
+        </script>
+
+</body>
+</html>

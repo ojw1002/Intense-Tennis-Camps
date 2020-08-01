@@ -1,0 +1,92 @@
+ /*FAQ Stylesheet - connected from Contact Page*/
+/*Opened in target blank (new tab)*/
+
+/*Background color of page*/
+html {
+    background-color: #05e8ba;
+    background-image: linear-gradient(330deg, #05e8ba 15%, #087ee1 80%);
+}
+
+/*Content style of all FAQ's on page*/
+.faq-content {
+    width:100%;
+}
+
+/*Heading 1 style*/
+h1 {
+    color:white;
+    text-align:center;
+}
+
+
+/*Container styling of each question container box*/
+.faq {
+    padding-right: 5px;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    border-radius: 10px;
+    text-align:center;
+    margin: 0 auto;
+}
+
+/*Styling on each question text*/
+.question {
+    padding: 5px 5px 5px 5px;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight:bold;
+    color:black;
+    display: inline-block;
+    cursor: pointer;
+    align-items:center;
+    width:100%;
+    font-size: 16px;
+}
+
+/*Question positioning after question is clicked. Stays in the same place*/
+.question::after {
+    position: absolute;
+ 
+}
+
+/*Shows content when clicked and active*/
+.question.active::after {
+    content:"";
+}
+
+/*The container for the answer*/
+.answer-content {
+    max-height: 0;
+    overflow:auto;
+    transition:max-height 0.2s ease-out;
+    width:100%;
+}
+
+/*Styling on each answer when it drops down when clicked*/
+.answer {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+    color:black;
+    font-size: 16px;
+}
+
+/*Styling of all paragraphs (all text)*/
+p {
+    width:100%;
+    font-size: 16px;
+}
+
+/*Chevron styling*/
+i.fas.fa-chevron-circle-down {
+    color:black;
+    font-size: 20px;
+}
+/*When the user clicks the question the caret will rotate 180 degrees to show that the answer dropped*/
+.question.active i.fas.fa-chevron-circle-down {
+    transform: rotate(180deg);
+}
+

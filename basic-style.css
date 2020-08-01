@@ -1,0 +1,127 @@
+/*Basic styles used in every page*/
+
+/*Navigation bar style*/
+
+html {
+    font: 16px/1.4 'Open Sans', arial, sans-serif;
+    padding: 1px 15px 15px;
+}
+
+body {
+    height:100%;
+    margin: 0;    
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
+.navbar {
+    margin-bottom: 20px;
+  }
+
+.navbar ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*Nav bar link colors are white*/
+nav .navbar-nav li a{
+    color: white !important;
+    border-bottom: 3px solid transparent;;
+}
+
+nav .navbar-nav li a:hover { 
+    border-bottom: 3px solid yellow;
+    transition: all 0.3s ease-in-out 0s;
+    width: 100%;
+}
+
+
+
+
+/*Footer*/
+
+.foot-title {
+    color:yellow;
+}
+  .foot-main-item {
+    padding: 1.25rem;
+    min-width: 12.5rem;
+  
+  }
+
+  /*Footer list*/
+  #footer-list {
+      list-style: none;
+      padding-left: 0; 
+  }
+
+  /*Social*/
+  #footer-social-list {
+    list-style: none;
+    padding-left: 0;
+
+  }
+
+  /*Copyright*/
+  #footer-copy-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+
+  .foot-social {
+    padding: 0 1.875rem 1.25rem;
+  }
+
+  #footer-social-list {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.25rem;
+  }
+  
+  #footer-social-list li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  #footer-copy-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   margin:auto;
+   padding:3px;
+  }
+
+  .facebook:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+}
+
+.twitter:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);    
+}
+
+.instagram:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);    
+}
+
+.flikr:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);    
+}
+ 
+
+ 
+  
+  
+
+
+
+
+
