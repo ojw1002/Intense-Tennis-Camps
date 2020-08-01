@@ -106,15 +106,16 @@
             United States by the National Council for Home Safety and Security. </p>
 
             <br>
-            <p class="lead"><i class="fas fa-award text-warning"></i> SRU was named one of the Top 25 Safest College
-            Campuses in America in 2020. Click <a href="https://www.sru.edu/news/042920b?fbclid=IwAR27V7sFfNPYxLHDw8WFF_tHvPhWphaiTPJDL88PlMVaQklGMsPeGQYgVRY" target="_blank">here</a> to learn more.</p>
+            <p class="lead"><i class="fas fa-award text-warning"></i> SRU was named one of the <strong>Top 25 Safest College
+            Campuses in America in 2020</strong>. View full article <a href="https://www.sru.edu/news/042920b?fbclid=IwAR27V7sFfNPYxLHDw8WFF_tHvPhWphaiTPJDL88PlMVaQklGMsPeGQYgVRY" target="_blank">here</a> to learn more.</p>
             <br><br>
-            Want to learn more about Slippery Rock University? Click <a href="https://www.sru.edu" target="_blank"
-            title="Slippery Rock University Official Website">here</a>!
+            <p class="lead">Want to learn more about Slippery Rock University? Click <a href="https://www.sru.edu" target="_blank"
+            title="Slippery Rock University Official Website">here</a>!</p>
+
       </div>
       
-      <div class="col-md-5">
-          
+      <div class="col-md-5 pt-5">
+          <div id="map" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#eee"/></div> 
       </div>
     </div>
 
@@ -292,9 +293,78 @@
       </div>
     </footer>
   
+    <!--***** GOOGlE MAP INLINE SCRIPT *****-->
+    <script>
+        function initMap() {      
+
+        //map centered at SRU
+            var map = new google.maps.Map(
+            document.getElementById('map'), {
+                zoom: 15, 
+                center: {lat:41.063206, lng:-80.040479},
+                streetViewControl: true
+            });
+
+            //sets bounds for map
+            var bounds = new google.maps.LatLngBounds();
+            
+            //markers for Slippery Rock University & Tennis Courts
+            var markers = [
+                ['Slippery Rock University',41.063206,-80.040479],
+                ['Tennis Courts', 41.059090, -80.039002]
+            ];
+    
+            //window content
+            var infoWindowContent = [
+            ['<div class="window_content">' +
+            '<h3>Slippery Rock University</h3>' +
+            '<p>1 Morrow Way</p>'+'<p>Slippery Rock, PA 16057</p>'  +'</div>'],
+            ['<div class="window_content">' +
+            '<h3>Tennis Courts</h3>' +
+            '<p>The courts sit on the edge of Kiester Road and are next to the baseball field</p>' +
+            '</div>']
+            ];
+
+            //initializes info window
+            var infoWindow = new google.maps.InfoWindow(), marker, i;
+
+            //loops through marker array to set the pos of marekrs
+            for( i = 0; i < markers.length; i++ ) {
+                var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+                bounds.extend(position);
+
+                marker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    title: markers[i][0]
+                });
+                 
+                //each marker has an info window    
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                        infoWindow.setContent(infoWindowContent[i][0]);
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));
+
+                //centers the map to fit all markers
+                map.fitBounds(bounds);
+            }
+
+            //overrides map zoom level
+            var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+                this.setZoom(15);
+                google.maps.event.removeListener(boundsListener);
+            });
+        }
+</script>
 
            
-
+        <!--***** GOOGLE API SCRIPT *****-->
+        <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3b2ikPisHazeBCdQ6ewNHQ7KEoasq5Mw&callback=initMap">
+        </script>
+            
 
 </body>
 </html>
