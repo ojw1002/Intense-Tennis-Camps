@@ -1,0 +1,223 @@
+/*Home page styling*/
+html {
+    box-sizing: border-box;
+    width:100%;
+}
+
+body {
+    width:100%;
+}
+
+
+/*Title header text*/
+
+.container {
+  text-align:center;
+  transform: translate (-50%,-50%);
+  width:100%;
+  
+}
+.container span {
+  color:black;
+  display:block;
+ 
+}
+
+.text1 {
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: 8px;
+  margin-bottom: 25px;
+  background: white;
+  position: relative;
+  animation: text 3s 1;
+  color:black;
+  padding-top:50px;
+}
+
+.text2 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+@keyframes text  {
+  0% {
+    color:white;
+    margin-bottom: -45px;
+  }
+
+  30% {
+    letter-spacing: 25px;
+    margin-bottom: -45px;
+  }
+
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -45px;
+  }
+}
+
+.slideshow {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+#home {
+border-radius: 13px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  opacity:100%;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,.dot:hover {
+  background-color: #717171;
+}
+
+/*Typing text animation*/
+.typing::after {
+  content: "|";
+  animation: blink ease 1s infinite;
+  color:orange;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  } 50% {
+    opacity: 1;
+  }
+}
+
+/*Logo*/
+.logo {
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#logo {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+      transform: translateY(0px);
+   }
+  to {
+      transform: translateY(-15px);
+   }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+   }
+   to {
+   transform: translateY(-15px);
+  }
+}
+
+
+.page-section {
+  border-radius:13px;
+}
+
+
+.divider-custom {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+}
+
+.divider-custom .divider-custom-line:first-child {
+  margin-right: 1rem;
+}
+
+.divider-custom .divider-custom-line:last-child {
+  margin-left: 1rem;
+}
+
+.divider-custom .divider-custom-icon {
+  font-size: 2rem;
+}
+.divider-custom.divider-light .divider-custom-line {
+  background-color: #fff;
+}
+
+
+
+/*Camp quotes*/
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .marketing h2 {
+    font-weight: 400;
+  }
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  
+  .fa-star {
+    color:rgb(235, 235, 51);
+  }
+
+  #cap {
+    font-size:8px;
+  }
+

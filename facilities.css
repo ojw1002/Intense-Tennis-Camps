@@ -1,0 +1,84 @@
+/*Facilities Styling*/
+
+       html {
+            box-sizing: border-box;
+            height:100%;
+        }
+
+        body {
+            height:100%;
+         
+        }
+
+        /*SRU logo*/
+        .logo {
+            text-align: center;
+            height:auto;
+            width:100%;
+        }
+
+        /*Google Map Styling*/
+        #map {
+            height: 400px;
+            width: 100%;
+            background-color:  	#D3D3D3;
+            max-width: 400px;
+            border-radius: 15px;
+        }
+
+        img {
+            border-radius:13px;
+        }
+
+        
+        .fas.fa-chevron-circle-down {
+            color:black;
+            font-size: 60px;
+            animation: bounce 1s infinite alternate;
+        }
+
+    
+
+        /*Bounce animation for arrow*/
+        @keyframes bounce {
+        from {
+            transform: translateY(0px);
+         }
+        to {
+            transform: translateY(-15px);
+         }
+        }
+        @-webkit-keyframes bounce {
+          from {
+            transform: translateY(0px);
+         }
+         to {
+         transform: translateY(-15px);
+        }
+    }
+
+
+    /*Different Sections following the SRU logo*/
+    /*Provided by Bootstrap*/
+
+.featurette-divider {
+  margin: 5rem 0; 
+}
+
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
