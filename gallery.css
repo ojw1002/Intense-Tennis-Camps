@@ -1,4 +1,7 @@
 /*Gallery Styling*/
+html,body{
+  height:100%;
+}
 
 #gal_img {
     border-radius: 5px;
